@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>About Page using EJS Templates</title>
+</head>
+
+<body>
+  <h1>About Page using EJS Templates</h1>
+  <h3>Some generated cards with JS</h3>
+  <section class="container d-flex">
+    <% for(let card of cards) { %>
+      <div class="card">
+        <div class="card-title">id <%= card.id %>
+        </div>
+        <div class="card-body">
+          <%= card.body %>
+        </div>
+      </div>
+      <% } %>
+
+  </section>
+</body>
+
+</html>
